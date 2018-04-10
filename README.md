@@ -69,6 +69,7 @@ set DATA_FILE=fashion-mnist.npz
 set MODULE=trainer.trainer
 
 # Training on GCS
+Copy fashion-mnist.npz from your local data subfolder to the same location on google storage.
 For training on Google Cloud just start train-gcs.bat. As a result you will get information that job is queued.
 From that moment you can see you job status and logs on google cloud console under ML Engine.
 Results will be stored on your google cloud bucket under /models/job_number/
