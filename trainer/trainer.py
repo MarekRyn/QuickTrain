@@ -46,11 +46,3 @@ if __name__ == '__main__':
               verbose=VERBOSE,
               validation_data=(data.X_test, data.Y_test),
               callbacks=callbacks)
-
-    # Training of model
-    model.fit(data.X_train, data.Y_train,
-              epochs=MAX_EPOCHS,
-              batch_size=BATCH_SIZE,
-              verbose=VERBOSE,
-              validation_split=VALIDATION_SPLIT,
-              callbacks=callbacks)
