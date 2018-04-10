@@ -57,16 +57,20 @@ This simple framework allows for easy training of Keras models locally and on go
 10. train-local.bat - starts training locally
 
 # train-gcs.bat configuration
+<pre><code>
 set BUCKET=marekml-data <--- replace with your google storage backet name
 set PROJECT=fashion
 set DATA_FILE=fashion-mnist.npz
 set CLOUD_CONFIG=cloudml-gpu.yaml
 set REGION=us-east1
 set RUNTIME=1.6
+</code></pre>
 
 # train-local.bat configuration
+<pre><code>
 set DATA_FILE=fashion-mnist.npz
 set MODULE=trainer.trainer
+</code></pre>
 
 # Training on GCS
 Copy fashion-mnist.npz from your local data subfolder to the same location on google storage.
