@@ -15,4 +15,6 @@ md %LOG_DIR%
 python -m %MODULE%^
  --job-dir %JOB_DIR%^
  --data-source %DATA_SOURCE%^
- --log-dir %LOG_DIR%
+ --log-dir %LOG_DIR%^
+ --verbose 1
+

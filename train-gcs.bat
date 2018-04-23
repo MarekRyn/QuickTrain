@@ -27,5 +27,8 @@ gcloud ml-engine jobs submit training %JOB_NAME%^
  --config=%CLOUD_CONFIG%^
  --^
  --data-source %DATA_SOURCE%^
- --log-dir %LOG_DIR%
+ --log-dir %LOG_DIR%^
+ --verbose 2
+
+
 

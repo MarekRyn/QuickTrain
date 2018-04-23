@@ -13,13 +13,12 @@ if __name__ == '__main__':
     VALIDATION_SPLIT = 0.1
     SAVE_BEST_ONLY = True
 
-    VERBOSE = 2
-
     # Parsing arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('--data-source', help='GCS or local path to training data', required=True)
     parser.add_argument('--job-dir', help='GCS or local path to write checkpoints and export models', required=True)
     parser.add_argument('--log-dir', help='GCS or local path to write logs', required=True)
+    parser.add_argument('--verbose', help='Verbose level', required=False, default=1)
     args = parser.parse_args()
     arguments = args.__dict__
 
@@ -43,6 +42,6 @@ if __name__ == '__main__':
     model.fit(data.X_train, data.Y_train,
               epochs=MAX_EPOCHS,
               batch_size=BATCH_SIZE,
-              verbose=VERBOSE,
+              verbose=int(arguments['verbose']),
               validation_data=(data.X_test, data.Y_test),
               callbacks=callbacks)
